@@ -1,0 +1,32 @@
+.cards{
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px 10px;
+}
+
+.cardss {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 50px;
+}
+
+
+@media only screen and (max-width: 850px) {
+  .cards{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .cards{
+    grid-template-columns: 1fr;
+  }
+}
