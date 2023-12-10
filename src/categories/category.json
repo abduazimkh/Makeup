@@ -1,0 +1,191 @@
+{
+  "blush" : {
+    "category" : [
+        "powder",
+        "cream"
+    ],
+    "tag" : [
+        "Vegan",
+        "Gluten+Free",
+        "Canadian",
+        "Natural",
+        "Non-GMO",
+        "purpicks",
+        "USDA+Organic",
+        "Organic",
+        "CertClean",
+        "EWG+Verified",
+        "Hypoallergenic",
+        "No+Talc"
+    ]
+  },
+  "bronzer" : {
+    "category" : [
+        "powder"
+    ],
+    "tag" : [
+        "Gluten+Free",
+        "Canadian",
+        "Natural",
+        "Organic",
+        "Vegan",
+        "purpicks",
+        "EWG+Verified"        
+    ]
+  },
+  "eyebrow" : {
+    "category" : [
+        "pencil"
+    ],
+    "tag" : [
+        "EWG+Verified",       
+        "purpicks"
+    ]
+  },
+  "eyeliner" : {
+    "category" : [
+        "liquid",
+        "pencil",
+        "gel",
+        "cream"
+    ],
+    "tag" : [
+        "Vegan",
+        "Natural",
+        "Canadian",
+        "Gluten+Free",
+        "Organic",
+        "purpicks",
+        "CertClean",
+        "EWG+Verified",
+        "Hypoallergenic",
+        "No+Talc",
+        "EcoCert"
+    ]
+  },
+  "eyeshadow" : {
+    "category" : [
+        "palette",
+        "pencil",
+        "",
+        "cream"
+    ],
+    "tag" : [
+        "Vegan",
+        "Canadian",
+        "Natural",
+        "Gluten+Free",
+        "Non-GMO",
+        "purpicks",
+        "CertClean",
+        "EWG+Verified",
+        "Organic",
+        "Hypoallergenic",
+        "USDA+Organic",
+        "No+Talc",
+        "EcoCert"
+    ]
+  },
+  "foundation" : {
+    "category" : [
+        "concealer",
+        "liquid",
+        "contour",
+        "bb_cc",
+        "cream",
+        "mineral",
+        "powder",
+        "highlighter"
+    ],
+    "tag" : [
+        "Vegan",
+        "Canadian",
+        "Natural",
+        "Gluten+Free",
+        "purpicks",
+        "CertClean",
+        "EWG+Verified",
+        "Hypoallergenic",
+        "No+Talc",
+        "water+free",
+        "cruelty+free",
+        "alcohol+free",
+        "oil+free",
+        "silicone+free"
+    ]
+  },
+  "lip_liner" : {
+    "category" : [
+        "pencil"
+    ],
+    "tag" : [
+        "Natural",
+        "Vegan",
+        "Gluten+Free",
+        "Canadian",
+        "purpicks",
+        "EWG+Verified",
+        "Hypoallergenic",
+        "No+Talc",
+        "cruelty+free"
+    ]
+  },
+  "lipstick" : {
+    "category" : [
+        "lipstick",
+        "lip_gloss",
+        "liquid",
+        "lip_stain"
+    ],
+    "tag" : [
+        "Canadian",
+        "Natural",
+        "Gluten+Free",
+        "Non-GMO",
+        "Peanut+Free+Product",
+        "Vegan",
+        "cruelty+free",
+        "Organic",
+        "purpicks",
+        "CertClean",
+        "Chemical+Free",
+        "EWG+Verified",
+        "Hypoallergenic",
+        "No+Talc"
+    ]
+  },
+  "mascara" : {
+    "category" : [
+        ""            
+    ],
+    "tag" : [
+        "Natural",
+        "Gluten+Free",
+        "Vegan",
+        "Canadian",
+        "Organic",
+        "purpicks",
+        "EWG+Verified",
+        "Hypoallergenic",
+        "No+Talc",
+        "EcoCert",
+        "USDA+Organic",
+        "CertClean"            
+    ]
+  },
+  "nail_polish" : {
+    "category" : [
+        null            
+    ],
+    "tag" : [
+        "Vegan",
+        "Canadian",
+        "Natural",
+        "Gluten+Free",
+        "Fair+Trade",
+        "Sugar+Free",
+        "Non-GMO",
+        "Dairy+Free"           
+    ]
+  }
+}
