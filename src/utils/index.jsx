@@ -74,7 +74,7 @@ const Card = (props) => {
       <h3>{title}</h3>
       <p>{text}</p>
       <strong>
-        {icon ? select : select}
+        {icon ? "$" : icon && select}
         {select === "uzs" ? price * 12300 : price}
       </strong>
 
