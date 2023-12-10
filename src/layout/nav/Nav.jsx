@@ -9,29 +9,13 @@ import { BsMinecartLoaded } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import { Container } from "../../utils";
 import data from "../../categories/category.json";
-import { useEffect, useRef, useState } from "react";
-// import { connect } from "react-redux";
-// import { categoryData } from "../../redux/actions/category-action";
+import { useState } from "react";
+
 
 const Nav = () => {
   const [type, setType] = useState([])
   const t = Object.keys(data)
 
-  const handleClick = (e) => {
-    // for(var a in data){
-    //   console.log(data[a].categry);
-    //   data[a].category.map(i => {
-    //   })
-    // }
-    
-    // if(e.target.closest("a")){
-    //   props.categoryData(e.target.closest("a").innerText)
-    // }
-  }
-
-  // useEffect(() => {
-  //   props.categoryData()
-  // }, [])
 
   return (
     <>
@@ -78,7 +62,7 @@ const Nav = () => {
       <div className={n.dropdown}>
         <div className={n.types_w}>
         <Container>
-          <div onClick={handleClick} className={n.types}>
+          <div className={n.types}>
             {
               t.map(types => {
                 return (

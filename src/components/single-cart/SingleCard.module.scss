@@ -11,6 +11,7 @@
 }
 
 .single__wrapper{
+  margin-bottom: 100px;
   margin-top: 30px;
   display: flex;
   gap: 20px;
@@ -26,11 +27,12 @@
     }
   }
   .center__img{
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
     img{
-      width: 90%;
+      width: 100%;
       height: 500px;
       object-fit: cover;
     }
@@ -73,7 +75,8 @@
   }
 
   .end__item{
-    margin-right: 200px;
+    word-break: break-all;
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
