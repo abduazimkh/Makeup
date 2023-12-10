@@ -16,8 +16,6 @@ import furth from "../../assets/images/furth.png"
 const Bannerr = (props) => {
   const data = useSelector(state => state.product.products_data)
 
-  console.log(data);
-
   useEffect(() => {
     props.productsData();
   }, []);
@@ -49,10 +47,6 @@ const Bannerr = (props) => {
           }
 
           }}
-          // pagination={{
-          //   clickable: true
-          // }}
-          // navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className={c.mySwiperb}
         >

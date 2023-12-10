@@ -1,4 +1,8 @@
 
+
+
+
+
 .container{
   max-width: 1200px;
   margin: 0 auto;
@@ -33,14 +37,38 @@
   }
   i{
     position: absolute;
-    top: 7px;
-    right: 7px;
+    top: 15px;
+    right: 10px;
+  }
+  .button_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .btn:first-child{
+      left: 5px;
+      width: 20%;
+      position: absolute;
+      bottom: 5px;
+    }
+    .btn:last-child{
+      width: 20%;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+    }
   }
   .btn{
     width: 96%;
     position: absolute;
     bottom: 5px;
   }
+}
+
+.cards{
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px 10px;
 }
 
 @media only screen and (max-width: 950px) {

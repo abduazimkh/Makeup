@@ -5,7 +5,6 @@ const initialState = {
 }
 
 const productsReducer = (state = initialState, { type, payload }) => {
-  console.log(state);
   switch(type){
     case PRODUCTS:
       return {

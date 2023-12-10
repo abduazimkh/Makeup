@@ -1,7 +1,8 @@
 import p from "./Products.module.scss";
-import { Card, Container } from "../../utils";
+import Card,{ Container } from "../../utils";
 import { connect, useSelector } from "react-redux";
 import { productsData } from "../../redux/actions/product-action";
+import { addToCart, incCart, decCart } from "../../redux/actions/cart-action";
 import { useEffect } from "react";
 import CardItem from "../card/CardItem";
 
@@ -17,29 +18,31 @@ import ikki from "../../assets/images/ikki.png"
 
 const Products = (props) => {
   const products = useSelector((state) => state.product.products_data);
-  
+  const count = useSelector(state => state.cart.cart_products)
+
   useEffect(() => {
     props.productsData();
   }, []);
 
   return (
     <>
-          <Container>
-      <div className={p.cards}>
-        {products.slice(40, 80).map((product) => (
-          <Card
-            key={product.id}
-            image={product.image_link}
-            title={product.name?.length > 20 ? product.name.slice(0, 20)+ "..." : product.name}
-            text={product.description?.length > 25 ? product.description.slice(0, 25)+"..." : product.description ? product?.description.length === 0 : "Deacription Not Found"}
-            icon={product.price_sign}
-            price={product.price}
-            product={product}
-            id={product.id}
-          />
-        ))}
-      </div>
-    </Container>
+      <Container>
+        <div className={p.cards}>
+          {products.slice(40, 80).map((product) => (
+            <Card
+              key={product.id}
+              image={product.image_link}
+              title={product.name?.length > 20 ? product.name.slice(0, 20)+ "..." : product.name}
+              text={product.description?.length > 25 ? product.description.slice(0, 25)+"..." : product.description ? product?.description.length === 0 : "Deacription Not Found"}
+              icon={product.price_sign}
+              price={product.price}
+              product={product}
+              id={product.id}
+            />
+          ))}
+        </div>
+      </Container>
+
       <div className={c.banner_conatiner}>
           <div className={c.circle1}></div>
           <div className={c.circle2}></div>
@@ -68,6 +71,7 @@ const Products = (props) => {
             </Swiper>
           </div>
       </div>
+
     <Container>
       <div className={p.cardss}>
         {products?.slice(70, 130).map((card, i) => {
@@ -80,4 +84,4 @@ const Products = (props) => {
   );
 };
 
-export default connect(null, { productsData })(Products);
+export default connect(null, { productsData, addToCart, incCart, decCart })(Products);

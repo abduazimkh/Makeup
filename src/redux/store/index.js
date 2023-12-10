@@ -7,7 +7,7 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = {
     key: 'reducer',
     storage: storage,
-    whitelist: ["product"]
+    whitelist: ["product", "cart", "like", "category"]
 };
 
 const presistedReducer = persistReducer(persistConfig, rootReducer);

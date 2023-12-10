@@ -13,7 +13,6 @@ const products_load = (products) => {
 const productsData = () => async dispatch => {
   axios("products.json")
     .then(response => {
-      console.log(response.data)
       dispatch(products_load(response.data))
     })
     .catch(error => console.log(error))

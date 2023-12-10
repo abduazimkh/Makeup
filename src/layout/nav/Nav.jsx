@@ -8,9 +8,31 @@ import { BsMinecartLoaded } from "react-icons/bs";
 
 import { NavLink } from "react-router-dom";
 import { Container } from "../../utils";
-
+import data from "../../categories/category.json";
+import { useEffect, useRef, useState } from "react";
+// import { connect } from "react-redux";
+// import { categoryData } from "../../redux/actions/category-action";
 
 const Nav = () => {
+  const [type, setType] = useState([])
+  const t = Object.keys(data)
+
+  const handleClick = (e) => {
+    // for(var a in data){
+    //   console.log(data[a].categry);
+    //   data[a].category.map(i => {
+    //   })
+    // }
+    
+    // if(e.target.closest("a")){
+    //   props.categoryData(e.target.closest("a").innerText)
+    // }
+  }
+
+  // useEffect(() => {
+  //   props.categoryData()
+  // }, [])
+
   return (
     <>
       <div className={n.top}>
@@ -53,8 +75,23 @@ const Nav = () => {
         </nav>
       </Container>
       <hr />
+      <div className={n.dropdown}>
+        <div className={n.types_w}>
+        <Container>
+          <div onClick={handleClick} className={n.types}>
+            {
+              t.map(types => {
+                return (
+                  <NavLink className={({isActive}) => isActive ? `${n.link} ${n.link__active}` : `${n.link}`} key={types} end to={"/category/"+types}>{types}</NavLink>
+                )
+              })
+            }
+          </div>
+        </Container>
+        </div>
+      </div>
     </>
   )
 }
 
-export default Nav
+export default (Nav)
