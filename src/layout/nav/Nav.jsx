@@ -9,13 +9,18 @@ import { BsMinecartLoaded } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import { Container } from "../../utils";
 import data from "../../categories/category.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { currencyData } from "../../redux/actions/currency-action";
 
-
-const Nav = () => {
+const Nav = (props) => {
   const [type, setType] = useState([])
   const t = Object.keys(data)
+  const [select, setSelect] = useState("");
 
+  useEffect(() => {
+    props.currencyData(select)
+  }, [select])
 
   return (
     <>
@@ -25,7 +30,7 @@ const Nav = () => {
 
       <Container>
         <div className={n.top_nav}>
-          <select>
+          <select onChange={(e) => setSelect(e.target.value)}>
             <option value="uzs">UZS</option>
             <option value="usd">USD</option>
           </select>
@@ -78,4 +83,4 @@ const Nav = () => {
   )
 }
 
-export default (Nav)
+export default connect(null, { currencyData })(Nav)

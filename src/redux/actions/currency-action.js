@@ -1,4 +1,3 @@
-import axios from "../../services/api";
 import { CURRECY } from "./index";
 
 const currency_load = (currency) => {
@@ -10,12 +9,9 @@ const currency_load = (currency) => {
   }
 }
 
-const currencyData = () => async dispatch => {
-  axios(`products.json`)
-    .then(response => {
-      dispatch(currency_load(response.data))
-    })
-    .catch(error => console.log(error))
+const currencyData = (select) => async dispatch => {
+  console.log(select);
+    dispatch(currency_load(select))
 }
 
 
