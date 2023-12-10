@@ -75,7 +75,7 @@ const Card = (props) => {
 
       <h3>{title}</h3>
       <p>{text}</p>
-      <strong>{icon}{price}</strong>
+      <strong>{!icon ? "$" : icon}{price}</strong>
 
       {cart_products.findIndex((cardproduct) => cardproduct.id === id) !==
       -1 ? (

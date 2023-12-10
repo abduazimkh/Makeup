@@ -26,8 +26,8 @@ const Nav = () => {
       <Container>
         <div className={n.top_nav}>
           <select>
-            <option value="uz">uz</option>
-            <option value="ru">ru</option>
+            <option value="uzs">UZS</option>
+            <option value="usd">USD</option>
           </select>
         </div>
       </Container>

@@ -11,3 +11,5 @@ export const DISLIKE_PRODUCT = "DISLIKE_PRODUCT";
 export const ADD_CATEGORY = "ADD_CATEGORY";
 export const ALL_CATEGORY = "ALL_CATEGORY";
 export const SINGLE_CATEGORY = "SINGLE_CATEGORY";
+
+export const CURRECY = "CURRECY";
