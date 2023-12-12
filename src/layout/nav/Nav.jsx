@@ -12,15 +12,18 @@ import data from "../../categories/category.json";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { currencyData } from "../../redux/actions/currency-action";
+import { searchData } from "../../redux/actions/search-action";
 
 const Nav = (props) => {
   const [type, setType] = useState([])
   const t = Object.keys(data)
   const [select, setSelect] = useState("");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     props.currencyData(select)
-  }, [select])
+    props.searchData(search)
+  }, [select, search])
 
   return (
     <>
@@ -44,7 +47,7 @@ const Nav = (props) => {
           </NavLink>
           
           <div className={n.search}>
-            <input type="text" placeholder="Search"/>
+            <input value={search} onChange={(e) => setSearch(e.target.value)} type="text" placeholder="Search"/>
             <button><FaSearch/></button>
           </div>
     
@@ -83,4 +86,4 @@ const Nav = (props) => {
   )
 }
 
-export default connect(null, { currencyData })(Nav)
+export default connect(null, { currencyData, searchData })(Nav)

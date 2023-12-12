@@ -13,3 +13,5 @@ export const ALL_CATEGORY = "ALL_CATEGORY";
 export const SINGLE_CATEGORY = "SINGLE_CATEGORY";
 
 export const CURRECY = "CURRECY";
+
+export const SEARCH = "SEARCH";

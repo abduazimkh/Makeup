@@ -19,6 +19,9 @@ import ikki from "../../assets/images/ikki.png"
 const Products = (props) => {
   const products = useSelector((state) => state.product.products_data);
   const count = useSelector(state => state.cart.cart_products)
+  const search = useSelector(state => state.search.search_value)
+
+  console.log(search);
 
   useEffect(() => {
     props.productsData();
@@ -28,7 +31,7 @@ const Products = (props) => {
     <>
       <Container>
         <div className={p.cards}>
-          {products.slice(40, 80).map((product) => (
+          {products.slice(40, 80).filter((i,j) => i.name.indexOf(search) !== -1).map((product) => (
             <Card
               key={product.id}
               image={product.image_link}
@@ -74,7 +77,7 @@ const Products = (props) => {
 
     <Container>
       <div className={p.cardss}>
-        {products?.slice(70, 130).map((card, i) => {
+        {products?.slice(70, 100).filter((i,j) => i.name.indexOf(search) !== -1).map((card, i) => {
           return <CardItem key={i} card={card} />
           })
         }

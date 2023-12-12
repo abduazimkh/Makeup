@@ -5,6 +5,7 @@ import { Tilt } from "react-tilt";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { Tooltip } from "antd";
 import "./CardItem.scss"
+import { NavLink } from "react-router-dom";
 const defaultOptions = {
   reverse: false,
   max: 35,
@@ -19,7 +20,7 @@ const defaultOptions = {
 
 
 function CardItem({ card }) {
-  const [showDetails, setDetails] = useState(false);
+  const [showDetails, setDetails] = useState(false);  
 
   
   const showDetailsHandler = () => {
@@ -43,7 +44,9 @@ function CardItem({ card }) {
           >
             <p className="card-item-title">{card?.product_name}</p>
             <div className="card-item-photo">
-              <img src={card?.image_link} alt="produc error" />
+              <NavLink to={`/single-card/${card.id}`}>
+                <img src={card?.image_link} alt="produc error" />
+              </NavLink>
             </div>
           </div>
           <div className="card-item-body">
@@ -73,7 +76,9 @@ function CardItem({ card }) {
           </Tooltip>
           <div className="card-item-details-section-one">
             <div className="card-item-photo">
-              <img src={card?.image_link} alt="produc error" />
+              <NavLink to={`/single-card/${card.id}`}>
+                <img src={card?.image_link} alt="produc error" />
+              </NavLink>
             </div>
             <p className="card-item-title">{card?.name}</p>
             <div className="card-item-details--description">

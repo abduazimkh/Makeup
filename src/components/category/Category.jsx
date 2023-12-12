@@ -13,12 +13,13 @@ const Category = (props) => {
   }, [name])
 
   const category = useSelector(state => state.category.categoty_data)
+  const search = useSelector(state => state.search.search_value)
 
   return (
     <Container>
       <div className={c.cards}>
         {
-          category?.map(product => 
+          category?.filter(i => i.name.indexOf(search) !== -1).map(product => 
               <Card
                 key={product.id}
                 image={product.image_link}
