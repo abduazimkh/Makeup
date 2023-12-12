@@ -50,7 +50,7 @@ const Bannerr = (props) => {
           modules={[Autoplay, Pagination, Navigation]}
           className={c.mySwiperb}
         >
-          <SwiperSlide className={c.slider2}>
+          <SwiperSlide  data-swiper-autoplay={2000} className={c.slider2}>
             <img src={first} alt="img" />
           </SwiperSlide>
           <SwiperSlide className={c.slider2}>
