@@ -15,6 +15,7 @@ const SingleCard = (props) => {
   const [product, setProduct] = useState([])
   const [errorPlaceholder, setErrorPlaceholder] = useState(false);
   const cart_products = useSelector((state) => state.cart.cart_products);
+  const select = useSelector((state) => state.currency.currency_data);
 
 
 
@@ -115,9 +116,9 @@ const SingleCard = (props) => {
 
           <div className={s.pricee}>
             <strong>Join LF Beauty Plus+ to earn 180 Plus +Points when you shop this product*</strong>
-            <div><p>{product.currency}:</p><strong>{product.price_sign}{product.price}</strong></div>
-            <h3>{product.price_sign}{product.price}</h3>
-            <p className={s.p}>Save: {product.price_sign}{product.price + 34}</p>
+            <div><p>{product.currency}:</p><strong>{select ? select : product.price_sign}{product.price}</strong></div>
+            <h3>{select ? select : product.price_sign}{product.price}</h3>
+            <p className={s.p}>Save: {select ? select : product.price_sign}{product.price + 34}</p>
           </div>
 
           <hr />

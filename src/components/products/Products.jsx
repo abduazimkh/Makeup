@@ -21,8 +21,6 @@ const Products = (props) => {
   const count = useSelector(state => state.cart.cart_products)
   const search = useSelector(state => state.search.search_value)
 
-  console.log(search);
-
   useEffect(() => {
     props.productsData();
   }, []);

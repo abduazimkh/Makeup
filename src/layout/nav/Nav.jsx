@@ -3,22 +3,38 @@ import n from "./Nav.module.scss";
 import logo from "../../assets/images/logo.svg";
 
 import { FaSearch } from "react-icons/fa";
-import { FiUser } from "react-icons/fi";
 import { BsMinecartLoaded } from "react-icons/bs";
+import { GoHeart } from "react-icons/go";
 
 import { NavLink } from "react-router-dom";
 import { Container } from "../../utils";
 import data from "../../categories/category.json";
 import { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { currencyData } from "../../redux/actions/currency-action";
 import { searchData } from "../../redux/actions/search-action";
+import { subCategory } from "../../redux/actions/category-action";
+
 
 const Nav = (props) => {
-  const [type, setType] = useState([])
   const t = Object.keys(data)
   const [select, setSelect] = useState("");
   const [search, setSearch] = useState("");
+
+  const subcategory = useSelector(state => state.category)
+
+  console.log(subcategory);
+  
+  useEffect(() => {
+    for(var i in data){
+      var a = [];
+      data[i]?.category?.map(c =>{
+        a.push(c)
+      })
+      console.log(a);
+        props.subCategory(a)
+    }
+  }, [])
 
   useEffect(() => {
     props.currencyData(select)
@@ -54,7 +70,7 @@ const Nav = (props) => {
           <div>
             <div className={n.page}>
               <NavLink to="liked" >
-                <FiUser /> 
+                <GoHeart />
                 Liked Products
               </NavLink>
             </div>
@@ -86,4 +102,4 @@ const Nav = (props) => {
   )
 }
 
-export default connect(null, { currencyData, searchData })(Nav)
+export default connect(null, { currencyData, searchData, subCategory })(Nav)

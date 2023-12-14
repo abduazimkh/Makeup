@@ -67,7 +67,6 @@
     "category" : [
         "palette",
         "pencil",
-        "",
         "cream"
     ],
     "tag" : [
@@ -155,9 +154,6 @@
     ]
   },
   "mascara" : {
-    "category" : [
-        ""            
-    ],
     "tag" : [
         "Natural",
         "Gluten+Free",
@@ -174,9 +170,6 @@
     ]
   },
   "nail_polish" : {
-    "category" : [
-        null            
-    ],
     "tag" : [
         "Vegan",
         "Canadian",

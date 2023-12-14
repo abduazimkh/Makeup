@@ -87,7 +87,7 @@ const Card = (props) => {
           >
             -
           </button>
-          <strong>
+          <strong className={c.span}>
             {cart_products.find((cartproduct) => cartproduct.id === id).count}
           </strong>
           <button

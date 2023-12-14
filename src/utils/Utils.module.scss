@@ -39,11 +39,18 @@
     position: absolute;
     top: 15px;
     right: 10px;
+    color: red;
+    font-size: 20px;
   }
   .button_wrapper{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    .span{
+      position: absolute;
+      bottom: -35px;
+    }
+
     .btn:first-child{
       left: 5px;
       width: 20%;
