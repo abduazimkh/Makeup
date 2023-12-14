@@ -5,7 +5,6 @@ const initialState = {
 }
 
 const currencyReducer = (state = initialState, action) => {
-  console.log(action?.payload?.currency);
   switch(action.type){
     case CURRECY:
       return {
