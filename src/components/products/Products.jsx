@@ -28,7 +28,7 @@ const Products = (props) => {
     <>
       <Container>
         <div className={p.cards}>
-          {products.slice(40, 80).filter((i,j) => i.name.indexOf(search) !== -1).map((product) => (
+          {products.slice(40, 80).filter((i,j) => i.name.includes(search)).map((product) => (
             <Card
               key={product.id}
               image={product.image_link}

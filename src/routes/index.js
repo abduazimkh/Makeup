@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Nav from "../layout/nav/Nav";
 import Category from "../components/category/Category";
+import { Loading } from "../utils";
 
 const Home = lazy(() => import("../pages/home/Home"));
 const Cart = lazy(() => import("../pages/cart/Cart"));
@@ -14,22 +15,22 @@ const RouteController = () => {
     <Nav/>
     <Routes>
       <Route path="" element={
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loading/>}>
           <Home/>
         </Suspense>}
       />
       <Route path="cart" element={
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loading/>}>
           <Cart/>
         </Suspense>}
       />
       <Route path="liked" element={
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loading/>}>
           <Like/>
         </Suspense>}
       />
       <Route path="/single-card/:id" element={
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loading/>}>
           <SingleCard/>
         </Suspense>}
       />

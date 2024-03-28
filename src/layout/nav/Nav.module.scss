@@ -122,3 +122,11 @@ nav{
     }
   }
 }
+
+@media only screen and (max-width: 280px) {
+  .dropdown{
+    .types{
+      grid-template-columns: 1fr;
+    }
+  }
+}

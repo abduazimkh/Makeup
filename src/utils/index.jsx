@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import c from "./Utils.module.scss";
 import a from "../assets/images/a.png";
 import { connect, useSelector } from "react-redux";
@@ -6,7 +6,6 @@ import {
   addToCart,
   incCart,
   decCart,
-  remuveCart,
 } from "../redux/actions/cart-action";
 import { likedCart, dislikedCart } from "../redux/actions/like-action";
 import { NavLink } from "react-router-dom";
@@ -17,7 +16,7 @@ export const Container = ({ children }) => {
 };
 
 const Card = (props) => {
-  const { id, product, image, title, text, price, icon, click } = props;
+  const { id, product, image, title, text, price, icon } = props;
   const [errorPlaceholder, setErrorPlaceholder] = useState(false);
   const like_products = useSelector((state) => state.like.liked_products);
   const cart_products = useSelector((state) => state.cart.cart_products);
@@ -48,7 +47,7 @@ const Card = (props) => {
     <div className={c.card}>
       <ul className="card__top-icons">
         {like_products.findIndex((likeproduct) => likeproduct.id === id) !==
-        -1 ? (
+          -1 ? (
           <i>
             <AiFillHeart onClick={() => handleDislikeProduct(product)} />
           </i>
@@ -79,7 +78,7 @@ const Card = (props) => {
       </strong>
 
       {cart_products.findIndex((cardproduct) => cardproduct.id === id) !==
-      -1 ? (
+        -1 ? (
         <div className={c.button_wrapper}>
           <button
             className={c.btn}
@@ -105,6 +104,15 @@ const Card = (props) => {
     </div>
   );
 };
+
+
+export const Loading = () => {
+  return (
+    <>
+      <div className={c.ldsroller}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </>
+  )
+}
 
 export default connect(null, {
   addToCart,
