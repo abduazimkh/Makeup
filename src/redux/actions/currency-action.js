@@ -10,7 +10,6 @@ const currency_load = (currency) => {
 }
 
 const currencyData = (select) => async dispatch => {
-  console.log(select);
     dispatch(currency_load(select))
 }
 

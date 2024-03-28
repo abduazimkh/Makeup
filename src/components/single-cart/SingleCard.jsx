@@ -37,13 +37,9 @@ const SingleCard = (props) => {
     .then(res => setProduct(res.data))
   }, [])
 
-  console.log(product);
-
   const handleRangeColor = (e) => {
     if(e.target.closest("div")){
-      console.log(e.target.parentElement);
       e.target.parentElement.style= `background-color: ${e.target.closest("div").dataset.color}`
-      // console.log(e.target.closest("div").dataset.color);
     }
   }
 

@@ -18,12 +18,11 @@ import ikki from "../../assets/images/ikki.png"
 
 const Products = (props) => {
   const products = useSelector((state) => state.product.products_data);
-  const count = useSelector(state => state.cart.cart_products)
   const search = useSelector(state => state.search.search_value)
 
   useEffect(() => {
     props.productsData();
-  }, []);
+  });
 
   return (
     <>
@@ -56,10 +55,6 @@ const Products = (props) => {
               slidesPerView={1}
               slidesPerGroup={1}
               loop={true}
-              // pagination={{
-              //   clickable: true
-              // }}
-              // navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
               className={c.mySwiperb}
             >

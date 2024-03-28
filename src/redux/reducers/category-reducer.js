@@ -6,7 +6,6 @@ const initialState = {
 }
 
 const categoryReducer = (state = initialState, action) => {
-  console.log(action?.payload?.sub);
   switch(action.type){
     case ADD_CATEGORY:
       return {

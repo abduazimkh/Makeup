@@ -21,17 +21,12 @@ const Nav = (props) => {
   const [select, setSelect] = useState("");
   const [search, setSearch] = useState("");
 
-  const subcategory = useSelector(state => state.category)
-
-  console.log(subcategory);
-  
   useEffect(() => {
     for(var i in data){
       var a = [];
       data[i]?.category?.map(c =>{
         a.push(c)
       })
-      console.log(a);
         props.subCategory(a)
     }
   }, [])
