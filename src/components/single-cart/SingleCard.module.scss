@@ -160,3 +160,35 @@
     height: 30px;
   }
 }
+
+
+@media only screen and (max-width: 900px) {
+  .single__wrapper{
+      .center__img{
+        img{
+          object-fit: contain;
+        }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .single__wrapper{
+    margin-bottom: 50px;
+    flex-direction: column;
+    .center__img{
+      max-width: none;
+      width: 100%;
+    }
+    .all_img{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+  }
+  .end__item{
+    width: 100%;
+  }
+}
